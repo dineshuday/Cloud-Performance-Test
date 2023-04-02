@@ -10,6 +10,8 @@ docker build must be edited according the machine in which you are building the 
         - docker buildx build --platform=linux/amd64 -t test-mattermost:latest .
 
 Latest image of our application is present as : https://hub.docker.com/repository/docker/siva1998/elg-5164-mattermost/general
+
+
 Commands to run k6 script
 -------------------------
 
