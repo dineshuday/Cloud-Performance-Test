@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mattermost-preview-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mattermost-preview
+  template:
+    metadata:
+      labels:
+        app: mattermost-preview
+    spec:
+      containers:
+      - name: mattermost-preview
+        image: mattermost/mattermost-preview:latest
+        ports:
+        - containerPort: 8065
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mattermost-preview-service
+spec:
+  selector:
+    app: mattermost-preview
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8065
