@@ -1,10 +1,10 @@
 import http from 'k6/http';
 import { sleep } from 'k6';
 export const options = {
-  vus: 1000,
+  vus: 10000,
   duration: '60s',
 };
 export default function () {
-  http.get('https://elg5164project-26fchisl4a-uc.a.run.app');
-  sleep(1);
+  http.get('http://34.152.6.95/');
+  sleep(10);
 }
