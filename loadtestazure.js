@@ -16,6 +16,6 @@ export const options = {
 };
 
 export default function () {
-  http.get('https://azure-mattermost.graysea-e021df86.canadacentral.azurecontainerapps.io/');
+  http.get('https://azure-mattermost.ambitiouspebble-f41aa10e.westus2.azurecontainerapps.io');
   sleep(1);
 }
